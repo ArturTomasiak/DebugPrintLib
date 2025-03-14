@@ -93,7 +93,7 @@ The provided build files are configured for `gcc`, but gcc is not a requirement;
 )(x)
 ```
 
-the print_one(x) macro chooses a function based on recieved argument type via C11's _Generic keyword
+the print_one(x) macro chooses a function based on received argument type via C11's _Generic keyword
 
 ```c
 #define args_1(WHAT, X) (WHAT(X))
@@ -116,7 +116,7 @@ the goal is to achieve f.e. print(a, b, c) expanding to print_one(a) + print_one
 } while (0)
 ```
 
-get_macro is called from a do while that ends always after one iteration so that the macro behaves like a single statemnt
+get_macro is called from a do while that ends after one iteration, ensuring the macro behaves like a single statemnt
 
 get_macro will pick the right macro based on the amount of arguments in `__VA_ARGS__` as the 11th value NAME will increase depending on how many arguments are sent, for example when sending print(a, b)
 _1 = a,
